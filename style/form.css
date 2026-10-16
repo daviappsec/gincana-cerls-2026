@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* FORMULÁRIO DE LOGIN */
+
+.formulario-container {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: var(--preto, #000000);
+}
+
+#formLogin {
+    width: 100%;
+    max-width: 430px;
+    padding: 32px;
+    background: var(--preto-card, #050505e5);
+    border: 1px solid rgba(214, 146, 0, 0.35);
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(214, 146, 0, 0.08);
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+}
+
+#formLogin h1 {
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-titulo, "Bebas Neue", serif);
+    font-size: 2.7rem;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#formLogin > p:first-of-type {
+    color: #c5c5c5;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+#formLogin label {
+    display: block;
+    color: var(--branco, #FFFFFF);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 18px 0 8px;
+}
+
+#formLogin input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #393939;
+    border-radius: 7px;
+    outline: none;
+    background: #111111;
+    color: var(--branco, #FFFFFF);
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#formLogin input:focus {
+    border-color: var(--dourado, #d69200d8);
+    box-shadow: 0 0 8px rgba(214, 146, 0, 0.18);
+}
+
+#formLogin input::placeholder {
+    color: #777777;
+}
+
+#formLogin button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 25px;
+    border: 1px solid var(--dourado, #d69200d8);
+    border-radius: 7px;
+    background: var(--dourado, #d69200d8);
+    color: #000000;
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#formLogin button:hover {
+    background: transparent;
+    color: var(--dourado, #d69200d8);
+}
+
+#formLogin #mensagem {
+    min-height: 20px;
+    margin-top: 15px;
+    color: var(--dourado, #d69200d8);
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#formLogin .botao-inicio {
+    display: block;
+    margin-top: 15px;
+    color: #cccccc;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+#formLogin .botao-inicio:hover {
+    color: var(--dourado, #d69200d8);
+}
+
+
+/* NAVEGAÇÃO HAMBURGER COMPARTILHADA */
+.cabecalho {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 5%;
+    background: #080808;
+    border-bottom: 1px solid rgba(214, 146, 0, 0.3);
+    z-index: 20;
+}
+.menu-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.menu-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 6px 10px;
+    border: 1px solid rgba(214, 146, 0, 0.55);
+    border-radius: 7px;
+    background: #111111;
+    color: #d69200;
+    font-size: 1.45rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.cabecalho .navegacao {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 220px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    background: #080808;
+    border: 1px solid rgba(214, 146, 0, 0.45);
+    border-radius: 9px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+}
+.cabecalho .navegacao.ativo {
+    display: flex;
+}
+.navegacao a,
+.navegacao button {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: #eeeeee;
+    font: 600 0.9rem var(--font-texto, "Montserrat", sans-serif);
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navegacao a:hover,
+.navegacao a[aria-current="page"],
+.navegacao button:hover {
+    background: rgba(214, 146, 0, 0.14);
+    color: #d69200;
+}
+.navegacao [hidden] {
+    display: none !important;
+}

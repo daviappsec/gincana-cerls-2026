@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* GERENCIAMENTO DE PONTUAÇÃO */
+
+body {
+    background: var(--preto, #000000);
+    color: var(--branco, #FFFFFF);
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 5%;
+    background: #080808;
+    border-bottom: 1px solid rgba(214, 146, 0, 0.3);
+}
+
+.marca {
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-titulo, "Bebas Neue", serif);
+    font-size: 1.9rem;
+    text-decoration: none;
+}
+
+.marca span {
+    color: #FFFFFF;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.navegacao a {
+    color: #d5d5d5;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navegacao a:hover,
+.navegacao a[aria-current="page"] {
+    color: var(--dourado, #d69200d8);
+}
+
+.botao-sair,
+.botao-secundario {
+    padding: 9px 15px;
+    border: 1px solid var(--dourado, #d69200d8);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.botao-sair:hover,
+.botao-secundario:hover {
+    background: var(--dourado, #d69200d8);
+    color: #000000;
+}
+
+.conteudo {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+.introducao {
+    margin-bottom: 25px;
+}
+
+.etiqueta {
+    margin-bottom: 8px;
+    color: var(--dourado, #d69200d8);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.introducao h1 {
+    margin-bottom: 12px;
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-titulo, "Bebas Neue", serif);
+    font-size: 2.6rem;
+    font-weight: normal;
+}
+
+.introducao > p:last-child {
+    max-width: 750px;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.painel {
+    padding: 25px;
+    margin-bottom: 22px;
+    background: var(--cinza, #33333a88);
+    border: 1px solid rgba(214, 146, 0, 0.2);
+    border-radius: 10px;
+}
+
+.painel h2 {
+    margin-bottom: 18px;
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-titulo, "Bebas Neue", serif);
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+#formularioPontuacao {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: #eeeeee;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #414141;
+    border-radius: 6px;
+    outline: none;
+    background: #111111;
+    color: #FFFFFF;
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-size: 0.9rem;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--dourado, #d69200d8);
+}
+
+.campo small {
+    color: #aaaaaa;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.resumo-atual {
+    padding: 18px;
+    background: #101010;
+    border: 1px solid #303030;
+    border-left: 3px solid var(--dourado, #d69200d8);
+    border-radius: 6px;
+}
+
+.resumo-atual h3 {
+    margin-bottom: 12px;
+    color: var(--dourado, #d69200d8);
+    font-size: 1rem;
+}
+
+.resumo-atual p {
+    margin-top: 8px;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+}
+
+.resumo-atual strong {
+    color: #FFFFFF;
+}
+
+.botao-principal {
+    align-self: flex-start;
+    padding: 12px 22px;
+    border: 1px solid var(--dourado, #d69200d8);
+    border-radius: 6px;
+    background: var(--dourado, #d69200d8);
+    color: #000000;
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.botao-principal:hover {
+    background: transparent;
+    color: var(--dourado, #d69200d8);
+}
+
+.mensagem {
+    min-height: 20px;
+    color: var(--dourado, #d69200d8);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.texto-apoio {
+    margin: -8px 0 18px;
+    color: #aaaaaa;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.tabela-responsiva {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #303030;
+    border-radius: 7px;
+}
+
+.tabela-responsiva table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #eeeeee;
+    font-size: 0.85rem;
+}
+
+.tabela-responsiva th,
+.tabela-responsiva td {
+    padding: 13px;
+    border-bottom: 1px solid #303030;
+    text-align: left;
+}
+
+.tabela-responsiva th {
+    background: #101010;
+    color: var(--dourado, #d69200d8);
+}
+
+.tabela-responsiva tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela-responsiva tbody tr:hover {
+    background: rgba(214, 146, 0, 0.05);
+}
+
+.rodape {
+    padding: 22px 5%;
+    border-top: 1px solid rgba(214, 146, 0, 0.2);
+    color: #999999;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+
+/* NAVEGAÇÃO HAMBURGER COMPARTILHADA */
+.cabecalho {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 5%;
+    background: #080808;
+    border-bottom: 1px solid rgba(214, 146, 0, 0.3);
+    z-index: 20;
+}
+.menu-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.menu-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 6px 10px;
+    border: 1px solid rgba(214, 146, 0, 0.55);
+    border-radius: 7px;
+    background: #111111;
+    color: #d69200;
+    font-size: 1.45rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.cabecalho .navegacao {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 220px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    background: #080808;
+    border: 1px solid rgba(214, 146, 0, 0.45);
+    border-radius: 9px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+}
+.cabecalho .navegacao.ativo {
+    display: flex;
+}
+.navegacao a,
+.navegacao button {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: #eeeeee;
+    font: 600 0.9rem var(--font-texto, "Montserrat", sans-serif);
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navegacao a:hover,
+.navegacao a[aria-current="page"],
+.navegacao button:hover {
+    background: rgba(214, 146, 0, 0.14);
+    color: #d69200;
+}
+.navegacao [hidden] {
+    display: none !important;
+}

@@ -1,0 +1,458 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   ARRECADAÇÃO DE ALIMENTOS
+======================================== */
+
+:root {
+    --preto: #000000;
+    --preto-card: #080808;
+    --cinza: #222222;
+    --branco: #ffffff;
+    --dourado: #d69200;
+    --borda: rgba(214, 146, 0, 0.3);
+
+    --font-texto: 'Montserrat', sans-serif;
+    --font-titulo: 'Bebas Neue', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--preto);
+    color: var(--branco);
+    font-family: var(--font-texto);
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.cabecalho {
+    position: relative;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    padding: 14px 5%;
+
+    background: var(--preto-card);
+    border-bottom: 1px solid var(--borda);
+}
+
+.marca {
+    color: var(--dourado);
+    font-family: var(--font-titulo);
+    font-size: 1.9rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Área que contém o botão hamburger e a navegação */
+
+.menu-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Botão hamburger */
+
+.menu-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 42px;
+    min-height: 42px;
+    padding: 6px 10px;
+
+    border: 1px solid rgba(214, 146, 0, 0.55);
+    border-radius: 7px;
+
+    background: #111111;
+    color: var(--dourado);
+
+    font-size: 1.45rem;
+    line-height: 1;
+
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s;
+}
+
+.menu-botao:hover {
+    background: rgba(214, 146, 0, 0.14);
+    color: #ffffff;
+}
+
+/* Menu fechado por padrão */
+
+.cabecalho .navegacao {
+    display: none;
+
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+
+    min-width: 220px;
+    padding: 10px;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+
+    background: var(--preto-card);
+    border: 1px solid rgba(214, 146, 0, 0.45);
+    border-radius: 9px;
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+}
+
+/* Menu aberto pelo JavaScript */
+
+.cabecalho .navegacao.ativo {
+    display: flex;
+}
+
+.navegacao a,
+.navegacao button {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+
+    border: 0;
+    border-radius: 5px;
+
+    background: transparent;
+    color: #eeeeee;
+
+    font: 600 0.9rem var(--font-texto);
+    text-align: left;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: background 0.25s, color 0.25s;
+}
+
+.navegacao a:hover,
+.navegacao button:hover,
+.navegacao a[aria-current="page"] {
+    background: rgba(214, 146, 0, 0.14);
+    color: var(--dourado);
+}
+
+.navegacao [hidden] {
+    display: none !important;
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+.painel {
+    padding: 25px;
+
+    background: #111111;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+}
+
+.cabecalho-painel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+.subtitulo,
+.etiqueta {
+    color: var(--dourado);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.cabecalho-painel h1 {
+    margin: 8px 0 12px;
+
+    color: var(--dourado);
+    font-family: var(--font-titulo);
+    font-size: 2.4rem;
+    font-weight: normal;
+}
+
+.descricao {
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.cabecalho-painel .etiqueta {
+    padding: 9px 12px;
+
+    border: 1px solid rgba(214, 146, 0, 0.4);
+    border-radius: 20px;
+
+    white-space: nowrap;
+}
+
+/* Mensagens de carregamento, sucesso ou erro */
+
+.mensagem {
+    min-height: 20px;
+    margin: 12px 0;
+
+    color: var(--dourado);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ========================================
+   TABELA DE ARRECADAÇÃO
+======================================== */
+
+.tabela-container {
+    width: 100%;
+    margin-top: 20px;
+
+    overflow-x: auto;
+
+    border: 1px solid #303030;
+    border-radius: 7px;
+}
+
+.tabela-container table {
+    width: 100%;
+    border-collapse: collapse;
+
+    color: #eeeeee;
+    font-size: 0.9rem;
+}
+
+.tabela-container th,
+.tabela-container td {
+    padding: 14px;
+    border-bottom: 1px solid #303030;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tabela-container th {
+    background: #101010;
+    color: var(--dourado);
+    font-weight: 700;
+}
+
+.tabela-container tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela-container tbody tr:hover {
+    background: rgba(214, 146, 0, 0.05);
+}
+
+/* Links e botões dentro da tabela */
+
+.tabela-container a {
+    color: var(--dourado);
+    text-decoration: none;
+}
+
+.tabela-container a:hover {
+    text-decoration: underline;
+}
+
+/* Campos numéricos, caso a página permita edição */
+
+.tabela-container input[type="number"] {
+    width: 100%;
+    min-width: 70px;
+    max-width: 120px;
+    padding: 9px;
+
+    border: 1px solid #444444;
+    border-radius: 5px;
+
+    outline: none;
+    background: #080808;
+    color: #ffffff;
+
+    font: 500 0.9rem var(--font-texto);
+}
+
+.tabela-container input[type="number"]:focus {
+    border-color: var(--dourado);
+}
+
+/* Botões de ação na tabela */
+
+.tabela-container button {
+    padding: 9px 12px;
+
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+
+    background: transparent;
+    color: var(--dourado);
+
+    font: 600 0.8rem var(--font-texto);
+    cursor: pointer;
+
+    transition: background 0.25s, color 0.25s;
+}
+
+.tabela-container button:hover {
+    background: var(--dourado);
+    color: #000000;
+}
+
+/* ========================================
+   RODAPÉ DO PAINEL
+======================================== */
+
+.rodape-painel {
+    margin-top: 18px;
+
+    color: #999999;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+
+/* CORREÇÃO DE VAZAMENTO — CONSULTA DA ARRECADAÇÃO */
+
+html {
+    min-height: 100%;
+    background: #000000;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    background: #000000;
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    min-width: 0;
+    margin: 35px auto;
+}
+
+.painel {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: #111111;
+    border: 1px solid rgba(214, 146, 0, 0.3);
+    border-radius: 10px;
+}
+
+.cabecalho-painel,
+.descricao,
+.mensagem,
+.rodape-painel {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.tabela-container {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+}
+
+.tabela-container table {
+    width: 100%;
+    max-width: 100%;
+    table-layout: fixed;
+}
+
+.tabela-container th,
+.tabela-container td {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.cabecalho {
+    width: 100%;
+    max-width: 100%;
+}
+
+img,
+table,
+input,
+button {
+    max-width: 100%;
+}
+
+
+/* CORREÇÃO DO TÍTULO E DA DESCRIÇÃO */
+
+.cabecalho-painel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 14px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.cabecalho-painel > div {
+    width: 100%;
+    min-width: 0;
+}
+
+.cabecalho-painel h1 {
+    width: 100%;
+    margin: 8px 0 12px;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.cabecalho-painel .descricao {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.cabecalho-painel .etiqueta {
+    display: inline-block;
+    align-self: flex-start;
+    max-width: 100%;
+    margin: 0;
+    white-space: normal;
+    line-height: 1.4;
+}
+

@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+    --preto: #000000;
+    --preto-card: #050505e5;
+    --cinza: #33333a88;
+    --cinza-escuro: #111111;
+    --branco: #ffffff;
+    --cinza-claro: #3d35726d;
+    --dourado: #d69200d8;
+    --roxo: #4B1F6F;
+
+    --font-texto: Montserrat, sans-serif;
+    --font-titulo: "Bebas Neue", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: var(--font-texto);
+}
+
+
+/* =====================================================
+   CABEÇALHO
+===================================================== */
+
+.cabecalho {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.marca {
+    font-weight: bolder;
+    color: var(--dourado);
+    text-decoration: none;
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+}
+
+.marca strong {
+    color: var(--branco);
+}
+
+.menu-area {
+    position: relative;
+}
+
+.menu-botao {
+    border: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: var(--branco);
+    margin: 0 5px 0 0;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   MENU HAMBÚRGUER
+===================================================== */
+
+.navegacao {
+    position: absolute;
+    top: 42px;
+    right: 0;
+
+    width: 190px;
+
+    padding: 12px;
+
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+
+    background-color: var(--preto-card);
+
+    border: 1px solid var(--cinza);
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+    z-index: 100;
+}
+
+.cabecalho .navegacao.ativo {
+    display: flex;
+}
+
+.navegacao a {
+    padding: 10px;
+
+    color: var(--branco);
+    text-decoration: none;
+
+    font-family: var(--font-texto);
+    font-weight: 600;
+
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.navegacao a:hover {
+    background-color: var(--roxo);
+    color: var(--branco);
+}
+
+.navegacao .botao-login {
+    color: var(--dourado);
+    border: 1px solid var(--dourado);
+}
+
+.navegacao .botao-login:hover {
+    background-color: var(--dourado);
+    color: var(--preto);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero-conteudo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.etiqueta {
+    margin-bottom: 4px;
+
+    font-family: var(--font-texto);
+    font-weight: bold;
+}
+
+.hero-conteudo p {
+    margin-bottom: 15px;
+
+    font-weight: bold;
+    font-family: var(--font-texto);
+}
+
+.etiqueta:hover {
+    color: var(--dourado);
+    transition: 1.5s;
+}
+
+.hero-conteudo p:hover {
+    color: var(--dourado);
+    transition: 1.5s;
+}
+
+
+/* =====================================================
+   BOTÕES DO HERO
+===================================================== */
+
+.hero-acoes {
+    margin: 0 10px 20px 10px;
+
+    padding: 6px;
+
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hero-acoes a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-texto);
+}
+
+
+/* BOTÃO VER PLACAR */
+
+.botao-principal {
+    padding: 9px 18px;
+
+    color: var(--preto);
+
+    background-color: var(--dourado);
+
+    border: 1px solid var(--dourado);
+    border-radius: 7px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    color: var(--branco);
+
+    background-color: var(--roxo);
+
+    border-color: var(--roxo);
+}
+
+
+/* BOTÃO SECUNDÁRIO */
+
+.botao-secundario {
+    padding: 9px 18px;
+
+    color: var(--branco);
+
+    background-color: transparent;
+
+    border: 1px solid var(--dourado);
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+.botao-secundario:hover {
+    color: var(--preto);
+    background-color: var(--dourado);
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.titulo-secao,
+.cartoes {
+    background-color: var(--cinza);
+
+    padding: 10px;
+    margin: 10px;
+
+    border-radius: 10px;
+
+    text-align: justify;
+}
+
+.titulo-secao:hover {
+    box-shadow: 1px 1px 12px rgba(219, 174, 24, 0.564);
+    transition: 1s;
+}
+
+.cartoes:hover {
+    box-shadow: 1px 1px 12px rgba(219, 174, 24, 0.564);
+    transition: 1s;
+}
+
+.titulo-secao h2,
+.cartoes h2 {
+    margin-bottom: 8px;
+
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+}
+
+.titulo-secao p,
+.cartoes p {
+    line-height: 1.5;
+}
+
+.cartoes a {
+    color: var(--branco);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-align: center;
+
+    margin: 8px 0 6px 0;
+
+    font-family: var(--font-titulo);
+}
+
+.cartao1 ul {
+    margin-left: 18px;
+}
+
+.cartao1 li {
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   TÍTULO DO PLACAR
+===================================================== */
+
+.titulo-secao2 {
+    text-align: center;
+
+    margin: 15px 0 10px 0;
+
+    font-family: var(--font-titulo);
+}
+
+.titulo-secao2 h2 {
+    font-size: 2.2rem;
+}
+
+.titulo-secao2 p {
+    font-family: var(--font-texto);
+}
+
+
+/* =====================================================
+   TABELA
+===================================================== */
+
+.tabela-conteiner {
+    width: 85%;
+
+    margin: 15px auto;
+
+    background-color: var(--cinza);
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.titulo-tabela {
+    padding: 15px;
+
+    text-align: center;
+
+    background-color: var(--cinza-escuro);
+}
+
+.titulo-tabela h2 {
+    margin-bottom: 3px;
+
+    font-family: var(--font-titulo);
+    font-size: 1.8rem;
+}
+
+.titulo-tabela h3 {
+    font-family: var(--font-texto);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #aaa;
+}
+
+.tabela-placar {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: center;
+
+    table-layout: fixed;
+}
+
+.tabela-placar th {
+    padding: 10px 6px;
+
+    background-color: var(--preto-card);
+
+    color: var(--dourado);
+
+    font-family: var(--font-titulo);
+    font-size: 1rem;
+
+    border-bottom: 1px solid var(--dourado);
+}
+
+.tabela-placar td {
+    padding: 10px 6px;
+
+    color: var(--branco);
+
+    font-family: var(--font-texto);
+    font-size: 0.75rem;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tabela-placar tbody tr {
+    transition: 0.3s;
+}
+
+.tabela-placar tbody tr:hover {
+    background-color: rgba(75, 31, 111, 0.25);
+}
+
+.tabela-placar tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela-placar td:first-child {
+    color: var(--dourado);
+    font-weight: 700;
+}
+
+.tabela-placar td:nth-child(2) {
+    font-weight: 700;
+}
+
+.tabela-placar td:last-child {
+    color: var(--dourado);
+    font-weight: 700;
+}
+
+.aviso-placar {
+    margin: 10px;
+
+    color: #999;
+
+    text-align: center;
+
+    font-size: 0.75rem;
+}
+
+
+/* =====================================================
+   CHAMADA FINAL
+===================================================== */
+
+.chamada-final {
+    margin: 30px 10px;
+    padding: 30px 15px;
+
+    text-align: center;
+
+    background-color: var(--cinza);
+
+    border-radius: 10px;
+}
+
+.chamada-final .etiqueta {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--dourado);
+}
+
+.chamada-final h2 {
+    margin-bottom: 20px;
+
+    font-family: var(--font-titulo);
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.rodape {
+    margin-top: 40px;
+
+    padding: 30px 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 10px;
+
+    background-color: var(--cinza-escuro);
+
+    border-top: 1px solid rgba(214, 146, 0, 0.35);
+
+    text-align: center;
+}
+
+.rodape .marca {
+    font-size: 1.7rem;
+}
+
+.marca-icone {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    margin-right: 5px;
+
+    color: var(--branco);
+
+    background-color: var(--roxo);
+
+    border-radius: 50%;
+
+    font-family: var(--font-titulo);
+    font-size: 1rem;
+}
+
+.rodape p {
+    color: #999;
+
+    font-family: var(--font-texto);
+    font-size: 0.75rem;
+}
+
+.rodape p a {
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.rodape p a:hover {
+    color: var(--dourado);
+    transition: 1s;
+}
+
+
+/* =====================================================
+   LINHAS
+===================================================== */
+
+hr {
+    border: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* NAVEGAÇÃO HAMBURGER COMPARTILHADA */
+.cabecalho {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 5%;
+    background: #080808;
+    border-bottom: 1px solid rgba(214, 146, 0, 0.3);
+    z-index: 20;
+}
+.menu-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.menu-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 6px 10px;
+    border: 1px solid rgba(214, 146, 0, 0.55);
+    border-radius: 7px;
+    background: #111111;
+    color: #d69200;
+    font-size: 1.45rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.cabecalho .navegacao {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 220px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    background: #080808;
+    border: 1px solid rgba(214, 146, 0, 0.45);
+    border-radius: 9px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+}
+.cabecalho .navegacao.ativo {
+    display: flex;
+}
+.navegacao a,
+.navegacao button {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: #eeeeee;
+    font: 600 0.9rem var(--font-texto, "Montserrat", sans-serif);
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navegacao a:hover,
+.navegacao a[aria-current="page"],
+.navegacao button:hover {
+    background: rgba(214, 146, 0, 0.14);
+    color: #d69200;
+}
+.navegacao [hidden] {
+    display: none !important;
+}

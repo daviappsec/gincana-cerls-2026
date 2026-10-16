@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arrecadação | Central da Gincana</title>
+
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/arrecadacao.css">
+    <link rel="stylesheet" href="../style/responsividade.css">
+
+    <script src="/script/arrecadacao.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a class="marca" href="/index.html">CENTRAL DA GINCANA</a>
+        <div class="menu-area">
+            <button class="menu-botao" id="menuBotao" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="navegacao">☰</button>
+            <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+                <a href="/index.html">Início</a><a href="/privado/checklist.html">Checklist</a><a
+                    href="/privado/arrecadacao.html" aria-current="page">Arrecadação</a><a
+                    href="/admin/contabilidade.html" id="linkContabilidade" hidden>Contabilidade</a><button
+                    type="button" id="botaoSair" class="botao-secundario">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="painel">
+
+            <div class="cabecalho-painel">
+
+                <div>
+
+                    <p class="subtitulo">
+                        CONTROLE DA EQUIPE
+                    </p>
+
+                    <h1>
+                        Arrecadação de alimentos
+                    </h1>
+
+                    <p class="descricao">
+                        Consulte e acompanhe as quantidades arrecadadas.
+                    </p>
+
+                </div>
+
+                <span id="tipoAcesso" class="etiqueta">
+                    Verificando acesso...
+                </span>
+
+            </div>
+
+            <div id="mensagem" class="mensagem" role="status" aria-live="polite"></div>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Alimento
+                            </th>
+
+                            <th>
+                                Quantidade arrecadada
+                            </th>
+
+                            <th id="cabecalhoAcoes" class="coluna-acoes">
+                                Ações
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tabelaArrecadacao">
+
+                        <tr>
+
+                            <td colspan="3" class="estado-vazio">
+                                Carregando arrecadação...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <p class="rodape-painel">
+                Os valores exibidos são consultados no banco de dados.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="/script/script.js" defer></script>
+</body>
+
+</html>

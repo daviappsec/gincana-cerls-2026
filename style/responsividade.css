@@ -1,0 +1,369 @@
+
+/* ==========================================
+   RESPONSIVIDADE GLOBAL — CENTRAL DA GINCANA
+   Celulares, tablets, notebooks e monitores
+========================================== */
+
+/* Evita cálculos de largura incorretos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: clip;
+}
+
+/* Imagens e mídias não ultrapassam os contêineres */
+img,
+video,
+iframe,
+svg,
+canvas {
+    max-width: 100%;
+}
+
+img,
+video {
+    height: auto;
+}
+
+/* Evita que elementos flexíveis estourem a tela */
+main,
+header,
+footer,
+section,
+article,
+aside,
+.container,
+.conteudo,
+.painel,
+.cartoes,
+.titulo-secao,
+.formulario,
+.form-container {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Textos longos */
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+label,
+td,
+th,
+li {
+    overflow-wrap: anywhere;
+}
+
+/* Formulários */
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    min-width: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Botões e links */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    cursor: pointer;
+}
+
+/* Tabelas: rolagem apenas no contêiner quando necessário */
+.tabela-container,
+.tabela-wrapper,
+.table-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tabela-container table,
+.tabela-wrapper table,
+.table-container table {
+    max-width: 100%;
+}
+
+/* Grades e grupos de cartões */
+.container,
+.conteudo,
+.cartoes-container,
+.lista-cartoes,
+.grid-container {
+    min-width: 0;
+}
+
+.flex-container,
+.linha,
+.grupo-botoes {
+    min-width: 0;
+    flex-wrap: wrap;
+}
+
+/* Menu de navegação */
+.cabecalho,
+.header,
+header {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.menu-area {
+    position: relative;
+    min-width: 0;
+}
+
+.menu-botao {
+    flex-shrink: 0;
+}
+
+/* ==========================================
+   TABLETS E TELAS MÉDIAS
+========================================== */
+
+@media (max-width: 900px) {
+    .container,
+    .conteudo,
+    main {
+        max-width: 100%;
+    }
+
+    .painel,
+    .cartoes,
+    .titulo-secao {
+        padding: 18px;
+    }
+
+    .cabecalho-painel {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .cabecalho-painel h1 {
+        font-size: clamp(1.8rem, 4vw, 2.4rem);
+    }
+
+    .tabela-container th,
+    .tabela-container td,
+    .tabela-wrapper th,
+    .tabela-wrapper td {
+        padding: 10px;
+    }
+}
+
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .cabecalho,
+    .header {
+        gap: 10px;
+        padding: 12px 4%;
+    }
+
+    .marca {
+        max-width: calc(100% - 55px);
+        font-size: clamp(1.35rem, 6vw, 1.8rem);
+        white-space: normal;
+    }
+
+    .container,
+    .conteudo,
+    main {
+        width: 92%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .painel,
+    .cartoes,
+    .titulo-secao {
+        padding: 14px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: clamp(1.65rem, 7vw, 2.2rem);
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: clamp(1.35rem, 5.5vw, 1.8rem);
+        line-height: 1.2;
+    }
+
+    p {
+        line-height: 1.65;
+    }
+
+    .cabecalho-painel {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .cabecalho-painel h1 {
+        font-size: clamp(1.8rem, 8vw, 2.3rem);
+    }
+
+    .cabecalho-painel .descricao {
+        font-size: 0.9rem;
+    }
+
+    .hero-acoes {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .hero-acoes a {
+        max-width: 100%;
+        padding: 8px;
+        text-align: center;
+    }
+
+    /* Formulários */
+    form {
+        max-width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        min-height: 42px;
+    }
+
+    textarea {
+        min-height: 100px;
+    }
+
+    form button,
+    .formulario button {
+        max-width: 100%;
+    }
+
+    /* Tabelas */
+    .tabela-container table,
+    .tabela-wrapper table,
+    .table-container table {
+        min-width: 500px;
+    }
+
+    .tabela-container th,
+    .tabela-container td,
+    .tabela-wrapper th,
+    .tabela-wrapper td {
+        padding: 9px;
+        font-size: 0.8rem;
+    }
+
+    /* Rodapés */
+    footer,
+    .rodape,
+    .rodape-painel {
+        overflow-wrap: anywhere;
+        line-height: 1.6;
+    }
+}
+
+/* ==========================================
+   CELULARES ESTREITOS
+========================================== */
+
+@media (max-width: 360px) {
+    .container,
+    .conteudo,
+    main {
+        width: 94%;
+    }
+
+    .painel,
+    .cartoes,
+    .titulo-secao {
+        padding: 11px;
+    }
+
+    .marca {
+        font-size: 1.3rem;
+    }
+
+    .menu-botao {
+        min-width: 38px;
+        min-height: 38px;
+        padding: 5px;
+    }
+
+    .cabecalho-painel h1 {
+        font-size: 1.7rem;
+    }
+}
+
+/* ==========================================
+   ACESSIBILIDADE
+========================================== */
+
+/* Mantém o foco visível para navegação por teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--dourado, #d69200);
+    outline-offset: 3px;
+}
+
+/* Respeita a preferência por menos animações */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerenciar Pontuação | Central da Gincana</title>
+
+    <link rel="stylesheet" href="/style/pontuacao.css">
+    <link rel="stylesheet" href="../style/responsividade.css">
+    
+    <script src="/script/pontuacao.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a class="marca" href="/index.html">CENTRAL DA GINCANA</a>
+        <div class="menu-area">
+            <button class="menu-botao" id="menuBotao" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="navegacao">☰</button>
+            <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+                <a href="/index.html">Início</a><a href="/admin/tarefas.html">Tarefas</a><a href="/admin/pontuacao.html"
+                    aria-current="page">Pontuação</a><a href="/privado/checklist.html">Checklist</a><button
+                    id="botaoSair" type="button" class="botao-secundario">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="introducao">
+
+            <p class="etiqueta">
+                ÁREA RESTRITA
+            </p>
+
+            <h1>
+                Gerenciar pontuação
+            </h1>
+
+            <p>
+                Selecione uma equipe e substitua o total atual de pontos
+                ganhos ou perdidos. As alterações refletem no placar público.
+            </p>
+
+        </section>
+
+        <section class="painel">
+
+            <h2>
+                Atualizar pontos
+            </h2>
+
+            <form id="formularioPontuacao">
+
+                <div class="campo">
+
+                    <label for="equipe">
+                        Equipe
+                    </label>
+
+                    <select id="equipe" name="equipe" required>
+
+                        <option value="">
+                            Carregando equipes...
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="tipoPontos">
+                        Tipo de pontuação
+                    </label>
+
+                    <select id="tipoPontos" name="tipoPontos" required>
+
+                        <option value="ganhos">
+                            Pontos ganhos
+                        </option>
+
+                        <option value="perdidos">
+                            Pontos perdidos
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="valor">
+                        Novo total
+                    </label>
+
+                    <input type="number" id="valor" name="valor" min="0" step="1" placeholder="Ex.: 150" required>
+
+                    <small>
+                        Este valor substituirá o total atual do tipo escolhido.
+                    </small>
+
+                </div>
+
+                <div class="resumo-atual" aria-live="polite">
+
+                    <h3>
+                        Pontuação atual da equipe
+                    </h3>
+
+                    <p>
+                        Pontos ganhos:
+                        <strong id="pontosGanhos">—</strong>
+                    </p>
+
+                    <p>
+                        Pontos perdidos:
+                        <strong id="pontosPerdidos">—</strong>
+                    </p>
+
+                    <p>
+                        Total líquido:
+                        <strong id="totalLiquido">—</strong>
+                    </p>
+
+                </div>
+
+                <button class="botao-principal" type="submit">
+                    Salvar pontuação
+                </button>
+
+                <p id="mensagem" class="mensagem" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <section class="painel painel-lista">
+
+            <h2>
+                Totais das equipes
+            </h2>
+
+            <p class="texto-apoio">
+                Esta tabela mostra os valores atuais registrados no sistema.
+            </p>
+
+            <div class="tabela-responsiva">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Equipe
+                            </th>
+
+                            <th>
+                                Pontos ganhos
+                            </th>
+
+                            <th>
+                                Pontos perdidos
+                            </th>
+
+                            <th>
+                                Total líquido
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tabelaPontuacao">
+
+                        <tr>
+
+                            <td colspan="4">
+                                Carregando pontuações...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <p>
+            Central da Gincana · 10ª Gincana do CELRS 2026
+        </p>
+
+    </footer>
+
+    <script src="/script/script.js" defer></script>
+</body>
+
+</html>

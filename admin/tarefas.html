@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gerenciar Tarefas | Central da Gincana</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/tarefas.css">
+    <link rel="stylesheet" href="../style/responsividade.css">
+    <script src="/script/tarefas.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a class="marca" href="/index.html">CENTRAL DA GINCANA</a>
+        <div class="menu-area">
+            <button class="menu-botao" id="menuBotao" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="navegacao">☰</button>
+            <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+                <a href="/index.html">Início</a><a href="/admin/tarefas.html" aria-current="page">Tarefas</a><a
+                    href="/admin/pontuacao.html">Pontuação</a><a href="/privado/checklist.html">Checklist</a><button
+                    id="botaoSair" type="button" class="botao-secundario">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="painel">
+
+            <h1>
+                Gerenciar tarefas
+            </h1>
+
+            <p>
+                Cadastre novas tarefas ou exclua as que não são mais necessárias.
+            </p>
+
+            <form id="formularioTarefa">
+
+                <label for="tarefa">
+                    Nome da tarefa
+                </label>
+
+                <input type="text" id="tarefa" name="tarefa" maxlength="200" placeholder="Digite a descrição da tarefa"
+                    required>
+
+                <button id="botaoAdicionar" type="submit">
+                    Adicionar tarefa
+                </button>
+
+                <p id="mensagem" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <section class="painel painel-lista">
+
+            <div class="titulo-lista">
+
+                <h2>
+                    Tarefas cadastradas
+                </h2>
+
+                <button id="botaoAtualizar" type="button" class="botao-secundario">
+                    Atualizar lista
+                </button>
+
+            </div>
+
+            <p id="mensagemLista" role="status" aria-live="polite">
+                Carregando tarefas...
+            </p>
+
+            <ul id="listaTarefas" aria-label="Tarefas cadastradas"></ul>
+
+        </section>
+
+    </main>
+
+    <script src="/script/script.js" defer></script>
+</body>
+
+</html>

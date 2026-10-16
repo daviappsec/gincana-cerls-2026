@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap");
+
+/* ÁREA DE CONTABILIDADE E ADMINISTRAÇÃO */
+
+body {
+    background: var(--preto, #000000);
+    color: var(--branco, #FFFFFF);
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 5%;
+    background: #080808;
+    border-bottom: 1px solid rgba(214, 146, 0, 0.3);
+}
+
+.marca {
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-titulo, "Bebas Neue", serif);
+    font-size: 1.9rem;
+    text-decoration: none;
+}
+
+.cabecalho nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.cabecalho nav a {
+    color: #d5d5d5;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cabecalho nav a:hover {
+    color: var(--dourado, #d69200d8);
+}
+
+.cabecalho nav button {
+    padding: 9px 15px;
+    border: 1px solid var(--dourado, #d69200d8);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cabecalho nav button:hover {
+    background: var(--dourado, #d69200d8);
+    color: #000000;
+}
+
+.conteudo {
+    width: 90%;
+    max-width: 1150px;
+    margin: 35px auto;
+}
+
+.painel {
+    padding: 25px;
+    margin-bottom: 22px;
+    background: var(--cinza, #33333a88);
+    border: 1px solid rgba(214, 146, 0, 0.2);
+    border-radius: 10px;
+}
+
+.painel h1,
+.painel h2 {
+    margin-bottom: 12px;
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-titulo, "Bebas Neue", serif);
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.painel > p {
+    margin-bottom: 20px;
+    color: #d0d0d0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+#formCadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+#formCadastro > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#formCadastro label {
+    color: #eeeeee;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#formCadastro input,
+#formCadastro select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #414141;
+    border-radius: 6px;
+    outline: none;
+    background: #111111;
+    color: #FFFFFF;
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-size: 0.9rem;
+}
+
+#formCadastro input:focus,
+#formCadastro select:focus {
+    border-color: var(--dourado, #d69200d8);
+    box-shadow: 0 0 7px rgba(214, 146, 0, 0.12);
+}
+
+#formCadastro button {
+    align-self: flex-start;
+    padding: 12px 22px;
+    border: 1px solid var(--dourado, #d69200d8);
+    border-radius: 6px;
+    background: var(--dourado, #d69200d8);
+    color: #000000;
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#formCadastro button:hover {
+    background: transparent;
+    color: var(--dourado, #d69200d8);
+}
+
+#mensagemCadastro {
+    margin-top: 15px;
+    color: var(--dourado, #d69200d8);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.tabela-container {
+    width: 100%;
+    margin-top: 18px;
+    overflow-x: auto;
+    border: 1px solid #303030;
+    border-radius: 7px;
+}
+
+.tabela-container table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #eeeeee;
+    font-size: 0.85rem;
+}
+
+.tabela-container th,
+.tabela-container td {
+    padding: 13px;
+    border-bottom: 1px solid #303030;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tabela-container th {
+    background: #101010;
+    color: var(--dourado, #d69200d8);
+    font-weight: 700;
+}
+
+.tabela-container tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela-container tbody tr:hover {
+    background: rgba(214, 146, 0, 0.05);
+}
+
+.tabela-container input,
+.tabela-container select {
+    max-width: 140px;
+    padding: 9px;
+    border: 1px solid #414141;
+    border-radius: 5px;
+    outline: none;
+    background: #111111;
+    color: #FFFFFF;
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+}
+
+.tabela-container input:focus,
+.tabela-container select:focus {
+    border-color: var(--dourado, #d69200d8);
+}
+
+.tabela-container button {
+    padding: 8px 12px;
+    margin: 3px;
+    border: 1px solid var(--dourado, #d69200d8);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--dourado, #d69200d8);
+    font-family: var(--font-texto, "Montserrat", sans-serif);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.tabela-container button:hover {
+    background: var(--dourado, #d69200d8);
+    color: #000000;
+}
+
+.tabela-container button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.tabela-container td {
+    line-height: 1.6;
+}
+
+
+/* NAVEGAÇÃO HAMBURGER COMPARTILHADA */
+.cabecalho {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 5%;
+    background: #080808;
+    border-bottom: 1px solid rgba(214, 146, 0, 0.3);
+    z-index: 20;
+}
+.menu-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.menu-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    min-height: 42px;
+    padding: 6px 10px;
+    border: 1px solid rgba(214, 146, 0, 0.55);
+    border-radius: 7px;
+    background: #111111;
+    color: #d69200;
+    font-size: 1.45rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.cabecalho .navegacao {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 220px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    background: #080808;
+    border: 1px solid rgba(214, 146, 0, 0.45);
+    border-radius: 9px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+}
+.cabecalho .navegacao.ativo {
+    display: flex;
+}
+.navegacao a,
+.navegacao button {
+    display: block;
+    width: 100%;
+    padding: 11px 12px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: #eeeeee;
+    font: 600 0.9rem var(--font-texto, "Montserrat", sans-serif);
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+.navegacao a:hover,
+.navegacao a[aria-current="page"],
+.navegacao button:hover {
+    background: rgba(214, 146, 0, 0.14);
+    color: #d69200;
+}
+.navegacao [hidden] {
+    display: none !important;
+}

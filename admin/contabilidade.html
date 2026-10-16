@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contabilidade | Central da Gincana</title>
+
+    <link rel="stylesheet" href="/style/admin.css">
+    <link rel="stylesheet" href="../style/responsividade.css">
+    
+    <script src="/script/contabilidade.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a class="marca" href="/index.html">CENTRAL DA GINCANA</a>
+        <div class="menu-area">
+            <button class="menu-botao" id="menuBotao" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="navegacao">☰</button>
+            <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+                <a href="/index.html">Início</a><a href="/privado/checklist.html">Checklist</a><a
+                    href="/privado/arrecadacao.html">Arrecadação</a><a href="/admin/contabilidade.html"
+                    aria-current="page">Contabilidade</a><button id="botaoSair" type="button"
+                    class="botao-secundario">Sair</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="painel">
+
+            <h1>
+                Cadastro de integrantes
+            </h1>
+
+            <p>
+                Cadastre os integrantes e, opcionalmente,
+                o número de WhatsApp para envio individual do acesso.
+            </p>
+
+            <form id="formCadastro">
+
+                <div>
+
+                    <label for="nomeIntegrante">
+                        Nome completo
+                    </label>
+
+                    <input type="text" id="nomeIntegrante" placeholder="Nome do integrante" required>
+
+                </div>
+
+                <div>
+
+                    <label for="codigoIntegrante">
+                        Código
+                    </label>
+
+                    <input type="text" id="codigoIntegrante" placeholder="Ex: ABCD-1234" required>
+
+                </div>
+
+                <div>
+
+                    <label for="telefoneIntegrante">
+                        WhatsApp
+                    </label>
+
+                    <input type="tel" id="telefoneIntegrante" placeholder="Ex: 73999999999">
+
+                </div>
+
+                <div>
+
+                    <label for="tipoIntegrante">
+                        Tipo
+                    </label>
+
+                    <select id="tipoIntegrante">
+
+                        <option value="integrante">
+                            Integrante
+                        </option>
+
+                        <option value="administracao">
+                            Administração
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <button type="submit">
+                    Cadastrar
+                </button>
+
+            </form>
+
+            <p id="mensagemCadastro"></p>
+
+        </section>
+
+        <section class="painel">
+
+            <h2>
+                Integrantes cadastrados
+            </h2>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Nome
+                            </th>
+
+                            <th>
+                                Tipo
+                            </th>
+
+                            <th>
+                                WhatsApp
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Ação
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="listaIntegrantes"></tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section class="painel">
+
+            <h2>
+                Contabilidade
+            </h2>
+
+            <div class="tabela-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Alimento
+                            </th>
+
+                            <th>
+                                Quantidade arrecadada
+                            </th>
+
+                            <th>
+                                Ações
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tabelaContabilidade">
+
+                        <tr>
+
+                            <td colspan="3">
+                                Carregando...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="/script/script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checklist | Central da Gincana</title>
+
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/tarefas.css">
+    <link rel="stylesheet" href="../style/responsividade.css">
+
+    <script src="/script/checklist.js" defer></script>
+
+</head>
+
+<body>
+
+    <header class="cabecalho">
+    <a class="marca" href="/index.html">URSOS DE <strong>GUERRA</strong></a>
+    <div class="menu-area">
+        <button class="menu-botao" id="menuBotao" type="button"
+            aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao">☰</button>
+        <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+            <a href="/index.html">Início</a><a href="/privado/checklist.html" aria-current="page">Checklist</a><a href="/privado/arrecadacao.html">Arrecadação</a><a href="/admin/tarefas.html" id="linkAdicionar" hidden>Gerenciar tarefas</a><a href="/admin/contabilidade.html" id="linkContabilidade" hidden>Contabilidade</a><button type="button" id="sair" class="botao-secundario">Sair</button>
+        </nav>
+    </div>
+</header>
+
+    <main class="tarefas-container">
+
+        <h1>
+            Tarefas da gincana
+        </h1>
+
+        <p>
+            Consulte as tarefas cadastradas e acompanhe o que falta realizar.
+        </p>
+
+        <p
+            id="mensagem"
+            role="status"
+            aria-live="polite"
+        >
+            Carregando tarefas...
+        </p>
+
+        <ul id="listaTarefas"></ul>
+
+    </main>
+
+    <script src="/script/script.js" defer></script>
+</body>
+
+</html>

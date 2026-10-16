@@ -1,0 +1,31 @@
+
+# Credenciais
+.env
+**/.env
+
+# Bancos locais e cÃ³pias
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+# DependÃªncias
+**/node_modules/
+
+# Logs
+npm-debug.log*
+
+# Dados privados da gincana
+acessos-administradores.csv
+acessos-integrantes.csv
+
+# Segredos e dependências
+.env
+**/.env
+**/node_modules/
+
+# Configurações e dados locais do backend
+backend/.env
+backend/*.db
+backend/*.db-shm
+backend/*.db-wal
+backend/node_modules/

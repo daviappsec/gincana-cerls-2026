@@ -30,7 +30,11 @@ body {
     font-family: var(--font-texto);
 }
 
-
+hr {
+    margin: 9px;
+    color: white;
+    font-weight: bolder;
+}
 /* =====================================================
    CABEÇALHO
 ===================================================== */
@@ -142,10 +146,13 @@ body {
 }
 
 .etiqueta {
-    margin-bottom: 4px;
 
     font-family: var(--font-texto);
-    font-weight: bold;
+    font-weight: bolder;
+    font-size: 1.3rem;
+     border: 1px solid var(--dourado);
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .hero-conteudo p {
@@ -156,8 +163,9 @@ body {
 }
 
 .etiqueta:hover {
-    color: var(--dourado);
-    transition: 1.5s;
+    
+    transition: 1s;
+   
 }
 
 .hero-conteudo p:hover {

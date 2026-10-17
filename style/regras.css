@@ -24,6 +24,9 @@
     font-weight: normal;
 }
 
+.sub-tit {
+    text-align: justify;
+}
 .apresen {
     background: var(--cinza, #33333a88);
     border: 1px solid rgba(214, 146, 0, 0.18);

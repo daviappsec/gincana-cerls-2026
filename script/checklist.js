@@ -3,7 +3,7 @@
 
 const listaTarefas = document.getElementById("listaTarefas");
 const mensagem = document.getElementById("mensagem");
-const botaoSair = document.getElementById("sair");
+const botaoSair = document.getElementById("botaoSair");
 const linkAdicionar = document.getElementById("linkAdicionar");
 const linkContabilidade = document.getElementById("linkContabilidade");
 
